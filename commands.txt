@@ -1,0 +1,16 @@
+1) SELECT DISTINCT COUNT(*) FROM city WHERE CountryCode = 'USA';
+2) mysql> (SELECT DISTINCT SUM(Population)  FROM city WHERE CountryCode  = 'ARG') UNION (SELECT DISTINCT SUM(LifeExpectancy) FROM country WHERE Code = 'ARG');
+3) SELECT Code, LifeExpectancy  FROM country WHERE LifeExpectancy IS NOT Null ORDER BY LifeExpectancy DESC LIMIT 1;
+4) SELECT DISTINCT c.Capital, b.Name WHERE Code='ESP' LIMIT 1 ;
+5) SELECT DISTINCT c.Region, b.Language FROM country c JOIN countrylanguage b ON c.Code=b.CountryCode WHERE Region = 'Southeast Asia';
+6) SELECT Name FROM city WHERE Name LIKE 'F%' LIMIT 25;
+7) SELECT DISTINCT COUNT(b.Name) FROM country c JOIN city b ON c.Code=b.CountryCode WHERE Code='CHN';
+8) SELECT DISTINCT CountryCode, Population FROM city WHERE Population IS NOT NULL ORDER BY Population ASC  LIMIT 1;
+9) SELECT DISTINCT COUNT(Code) FROM country;
+10) SELECT code, SurfaceArea  FROM country ORDER BY SurfaceArea DESC LIMIT 10;
+11) SELECT CountryCode, Name, Population FROM city WHERE CountryCode = 'JPN' ORDER BY Population DESC LIMIT 5;
+12a) UPDATE country SET HeadOfState = REPLACE(HeadOfState, 'Elisabeth II', 'Elizabeth II'); 12b) SELECT Name, Code FROM country  WHERE HeadOfState = 'Elizabeth II';
+13) SELECT Name, Population*SurfaceArea AS Pop  FROM country  WHERE Pop != '1' ORDER BY Pop ASC LIMIT 10; "Not Finished"
+14) SELECT DISTINCT Language FROM countrylanguage;
+15) SELECT Name, GNP FROM country ORDER BY GNP DESC LIMIT 10;
+16) 
